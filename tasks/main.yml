@@ -1,0 +1,26 @@
+---
+- name: resolve platform specific vars
+  include_vars: '{{ item }}'
+  with_first_found:
+    - files:
+        - '{{ ansible_distribution }}-{{ ansible_distribution_release }}.yml'
+        - '{{ ansible_distribution }}.yml'
+        - '{{ ansible_os_family }}.yml'
+      skip: true
+      paths:
+        - '{{ role_path }}/vars'
+- name: download
+  become: yes
+  become_user: root
+  get_url:
+    url: '{{ weaveworks_ignite_exe_url }}'
+    dest: '{{ weaveworks_ignite_install_exe }}'
+    checksum: '{{ weaveworks_ignite_checksum }}'
+    mode: 0755
+- name: link
+  become: yes
+  become_user: root
+  file:
+    src: '{{ weaveworks_ignite_install_exe }}'
+    dest: '{{ weaveworks_ignite_link }}'
+    state: link

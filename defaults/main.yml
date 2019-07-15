@@ -1,0 +1,10 @@
+---
+# defaults file for weaveworks_ignite
+weaveworks_ignite_ver: v0.4.1
+weaveworks_ignite_mirror: https://github.com/weaveworks/ignite/releases/download
+
+weaveworks_ignite_checksums:
+    # https://github.com/weaveworks/ignite/releases/download/v0.4.1/ignite
+    v0.4.1: sha256:ac58339c4c265ef007f212ef6953070fafb7ff2beb12239711ea389e6c134cb1
+
+weaveworks_ignite_install_dir: /usr/local/bin
