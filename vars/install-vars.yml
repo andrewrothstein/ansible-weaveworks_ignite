@@ -1,0 +1,7 @@
+---
+weaveworks_ignite_ver_exe: '{{ weaveworks_ignite_app.name }}-{{ weaveworks_ignite_app.version }}'
+weaveworks_ignite_exe_url: '{{ weaveworks_ignite_mirror }}/{{ weaveworks_ignite_app.version }}/{{ weaveworks_ignite_app.name }}-{{ weaveworks_ignite_arch }}'
+
+weaveworks_ignite_checksum: '{{ weaveworks_ignite_checksums[weaveworks_ignite_app.name][weaveworks_ignite_app.version][weaveworks_ignite_arch] }}'
+weaveworks_ignite_install_exe: '{{ weaveworks_ignite_install_dir }}/{{ weaveworks_ignite_ver_exe }}'
+weaveworks_ignite_link: '{{ weaveworks_ignite_install_dir }}/{{ weaveworks_ignite_app.name }}'
