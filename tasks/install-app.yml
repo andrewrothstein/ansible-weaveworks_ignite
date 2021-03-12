@@ -2,7 +2,7 @@
 - name: resolving vars for {{ weaveworks_ignite_app.name }} {{ weaveworks_ignite_app.version }}
   include_vars:
     file: install-vars.yml
-- name: download
+- name: downloading {{ weaveworks_ignite_exe_url }} to {{ weaveworks_ignite_install_exe }}
   become: yes
   become_user: root
   get_url:
@@ -10,7 +10,7 @@
     dest: '{{ weaveworks_ignite_install_exe }}'
     checksum: '{{ weaveworks_ignite_checksum }}'
     mode: 0755
-- name: link
+- name: linking {{ weaveworks_ignite_link }} to {{ weaveworks_ignite_install_exe }}
   become: yes
   become_user: root
   file:
