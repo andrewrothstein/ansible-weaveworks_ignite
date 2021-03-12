@@ -28,7 +28,8 @@ dl_ver() {
     dl $app $ver arm64
 }
 
-VERS=${1:-v0.7.1}
+VERS=${1:-v0.8.0}
+
 printf "weaveworks_ignite_checksums:\n"
 printf "  ignite:\n"
 for ver in $VERS; do

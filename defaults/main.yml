@@ -1,6 +1,6 @@
 ---
 # defaults file for weaveworks_ignite
-weaveworks_ignite_ver: v0.7.1
+weaveworks_ignite_ver: v0.8.0
 weaveworks_ignite_mirror: https://github.com/weaveworks/ignite/releases/download
 weaveworks_ignite_arch: amd64
 
@@ -63,6 +63,11 @@ weaveworks_ignite_checksums:
       amd64: sha256:07f473efe4a2b24879df1403143c3ed82060cd2f65475b6e8385b3da00b2f91b
       # https://github.com/weaveworks/ignite/releases/download/v0.7.1/ignite-arm64
       arm64: sha256:dd70c5403319292b6711f062b8185360452926c567c200f75e7a6d6f2d444e67
+    v0.8.0:
+      # https://github.com/weaveworks/ignite/releases/download/v0.8.0/ignite-amd64
+      amd64: sha256:55e622f08e9ae5df601644a218e72105bc441bdb4d7d678e3e83753459d89398
+      # https://github.com/weaveworks/ignite/releases/download/v0.8.0/ignite-arm64
+      arm64: sha256:faade5a88c73a6732e9475d90853bb9774c348c9e9e8b2408275c17d1a0608c4
   ignited:
     v0.5.0:
       # https://github.com/weaveworks/ignite/releases/download/v0.5.0/ignited-amd64
@@ -119,3 +124,8 @@ weaveworks_ignite_checksums:
       amd64: sha256:84fc72a794fc9dda145714dabf31841efd675b8a35b595ac42210813bb615720
       # https://github.com/weaveworks/ignite/releases/download/v0.7.1/ignited-arm64
       arm64: sha256:76eb7c4ea10f0882cd27a6f3d7f08d8324c0086f5ea00fe466cace72d1b66b54
+    v0.8.0:
+      # https://github.com/weaveworks/ignite/releases/download/v0.8.0/ignited-amd64
+      amd64: sha256:ae5164ebc5e51d176a3203372fb91f5923703e4af3a67b9a9671bba2e171d257
+      # https://github.com/weaveworks/ignite/releases/download/v0.8.0/ignited-arm64
+      arm64: sha256:1d389fd40ae39c134ec7e595bccfdb6dd67609a68b397016ed6907ed4082b5c7
