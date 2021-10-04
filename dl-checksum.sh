@@ -1,4 +1,5 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
+set -e
 DIR=~/Downloads
 MIRROR=https://github.com/weaveworks/ignite/releases/download
 
@@ -17,7 +18,7 @@ dl()
     fi
 
     printf "      # %s\n" $url
-    printf "      %s: sha256:%s\n" $arch `sha256sum $lfile | awk '{print $1}'`
+    printf "      %s: sha256:%s\n" $arch $(sha256sum $lfile | awk '{print $1}')
 }
 
 dl_ver() {
@@ -28,14 +29,17 @@ dl_ver() {
     dl $app $ver arm64
 }
 
-VERS=${1:-v0.8.0}
+dl_checksums() {
+    local vers=$1
+    printf "weaveworks_ignite_checksums:\n"
+    printf "  ignite:\n"
+    for ver in $vers; do
+        dl_ver ignite $ver
+    done
+    printf "  ignited:\n"
+    for ver in $vers; do
+        dl_ver ignited $ver
+    done
+}
 
-printf "weaveworks_ignite_checksums:\n"
-printf "  ignite:\n"
-for ver in $VERS; do
-    dl_ver ignite $ver
-done
-printf "  ignited:\n"
-for ver in $VERS; do
-    dl_ver ignited $ver
-done
+dl_checksums ${1:-v0.10.0}
