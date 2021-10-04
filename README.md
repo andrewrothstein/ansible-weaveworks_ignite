@@ -1,6 +1,6 @@
 andrewrothstein.weaveworks_ignite
 =========
-[![Build Status](https://travis-ci.org/andrewrothstein/ansible-weaveworks_ignite.svg?branch=master)](https://travis-ci.org/andrewrothstein/ansible-weaveworks_ignite)
+![Build Status](https://github.com/andrewrothstein/ansible-weaveworks_ignite/actions/workflows/build.yml/badge.svg)
 
 Installs [ignite](https://www.weave.works/blog/fire-up-your-vms-with-weave-ignite)
 
